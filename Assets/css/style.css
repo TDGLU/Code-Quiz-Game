@@ -26,14 +26,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  background-color: pink;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url(/Assets/imgs/frog1.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
-  /* opacity: 50%; */
+  background-size: cover;
+  z-index: 1;
 }
 
 .question {
-  opacity: 100%;
+  opacity: 90%;
   font-weight: bolder;
   display: flex;
   justify-content: center;
@@ -45,15 +55,15 @@
   border: 2rem;
   padding: 2rem;
   border-radius: 100px;
-  height: 100px;
-  width: 800px;
+  height: 12%;
+  width: 75%;
   position: fixed;
-  top: 8%;
+  top: 10%;
+  z-index: 2;
 }
 
 .answer {
-  opacity: 100%;
-  font-weight: bolder;
+  opacity: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,8 +74,25 @@
   border: 2rem;
   padding: 2rem;
   border-radius: 100px;
-  height: 500px;
-  width: 800px;
+  height: 50%;
+  width: 75%;
   position: fixed;
-  top: 25%;
+  top: 28%;
+  z-index: 2;
+}
+
+.choice-list {
+  position: absolute;
+  left: 12%;
+  text-align: center;
+  z-index: 3;
+}
+
+.c1, .c2, .c3, .c4 {
+  text-align: center;
+  display: flex;
+  background-color: var(--darkgreen);
+  margin: 25px;
+  padding: 12px;
+  border-radius: 33px;
 }
