@@ -29,23 +29,43 @@
   background-image: url(/Assets/imgs/frog1.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  opacity: 50% !important;
+  /* opacity: 50%; */
 }
 
 .question {
-  opacity: 100% !important;
+  opacity: 100%;
   font-weight: bolder;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 3rem;
-  color: azure;
+  color:white;
   background-color: var(--green);
+  border: 2rem;
   padding: 2rem;
   border-radius: 100px;
   height: 100px;
   width: 800px;
   position: fixed;
   top: 8%;
+}
+
+.answer {
+  opacity: 100%;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  color:white;
+  background-color: var(--green);
+  border: 2rem;
+  padding: 2rem;
+  border-radius: 100px;
+  height: 500px;
+  width: 800px;
+  position: fixed;
+  top: 25%;
 }
