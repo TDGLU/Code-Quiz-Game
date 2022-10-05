@@ -40,7 +40,7 @@
 }
 
 .question {
-  opacity: 90%;
+  opacity: 85%;
   font-weight: bolder;
   display: flex;
   justify-content: center;
@@ -60,7 +60,7 @@
 }
 
 .answer {
-  opacity: 90%;
+  opacity: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
