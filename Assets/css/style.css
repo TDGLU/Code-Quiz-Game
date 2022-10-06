@@ -98,18 +98,16 @@
   border-radius: 33px;
 }
 
-.c:hover {
+.c:hover, .c:hover.right, .c:hover.wrong {
   opacity: 50%;
 }
 
 .c.wrong {
   background-color: var(--red);
   border: solid 3px var(--darkgreen);
-  opacity: 100%;
 }
 
 .c.right {
   background-color: var(--blue);
   border: solid 3px var(--darkgreen);
-  opacity: 100%;
 }
