@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: Poppins;
-  src: url(/Assets/fonts/POPPINS-REGULAR.TTF);
+  src: url("/Assets/fonts/POPPINS-REGULAR.TTF");
 }
 
 
@@ -35,7 +35,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(/Assets/imgs/frog2.jpg);
+  background-image: url("/Assets/imgs/frog2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
