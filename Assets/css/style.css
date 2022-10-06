@@ -12,6 +12,8 @@
   --green: #07d600;
   --darkgreen: #059100;
   --babyblue: #00FFFF;
+  --red: rgb(238, 0, 0);
+  --blue: rgb(0, 183, 255);
 }
 
 @font-face {
@@ -57,6 +59,7 @@
   position: fixed;
   top: 10%;
   z-index: 2;
+  box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 30%);
 }
 
 .answer {
@@ -76,6 +79,7 @@
   position: fixed;
   top: 28%;
   z-index: 2;
+  box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 30%);
 }
 
 .choice-list {
@@ -85,11 +89,27 @@
   width: 80%;
 }
 
-.c1, .c2, .c3, .c4 {
+.c {
   text-align: center;
   display: flex;
   background-color: var(--darkgreen);
   margin: 25px;
   padding: 12px;
   border-radius: 33px;
+}
+
+.c:hover {
+  opacity: 50%;
+}
+
+.c.wrong {
+  background-color: var(--red);
+  border: solid 3px var(--darkgreen);
+  opacity: 100%;
+}
+
+.c.right {
+  background-color: var(--blue);
+  border: solid 3px var(--darkgreen);
+  opacity: 100%;
 }
