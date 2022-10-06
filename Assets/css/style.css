@@ -98,7 +98,7 @@
   border-radius: 33px;
 }
 
-.c:hover, .c:hover.right, .c:hover.wrong {
+.c:hover {
   opacity: 50%;
 }
 
