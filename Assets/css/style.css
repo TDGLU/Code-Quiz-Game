@@ -22,8 +22,9 @@
 }
 
 @keyframes shadow-anim {
-  from {box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 60%);}
-  to {box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 100%)}
+  25% {box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 60%);}
+  50% {box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 100%);}
+  100% {box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 60%);}
 }
 
 .container {
@@ -65,7 +66,8 @@
 
 .start:hover {
   animation-name: shadow-anim;
-  animation-duration: 1.4s;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 .question {

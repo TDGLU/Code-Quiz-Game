@@ -1,25 +1,45 @@
 console.log('Test')
 
-let c1 = document.getElementById('c1')
-let c2 = document.getElementById('c2')
-let c3 = document.getElementById('c3')
-let c4 = document.getElementById('c4')
+const questionBox = document.getElementById('question')
 
-let question = document.getElementById('question')
+const answerBox = document.getElementById('answer')
 
 const startButton = document.getElementById('start')
+
+const randomized, currentQuestion
 
 startButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
   console.log('Started')
   startButton.classList.add('hide')
+  randomized = question.sort(() => Math.random() - .5)
+  currentQuestion = 0
+  questionBox.classList.remove('hide')
+  answerBox.classList.remove('hide')
+  nextQuestion()
 }
 
 function nextQuestion() {
+  showQuestion(randomized[currentQuestion])
+}
+
+function showQuestion(question) {
+  question
+}
+
+function chooseAnswer() {
 
 }
 
-function answer() {
-
-}
+const question = [
+  {
+    question: 'Commonly used data types DO NOT include:',
+    answers: [
+      { text: 'Numbers', correct: false},
+      { text: 'Strings', correct: false},
+      { text: 'Booleans', correct: false},
+      { text: 'Javascript', correct: true},
+    ]
+  }
+]
