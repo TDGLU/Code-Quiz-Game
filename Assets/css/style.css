@@ -138,3 +138,7 @@
   background-color: var(--blue);
   border: solid 3px var(--darkgreen);
 }
+
+.hide {
+  display: none;
+}
