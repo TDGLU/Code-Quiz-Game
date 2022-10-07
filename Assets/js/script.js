@@ -6,15 +6,15 @@ const answerBox = document.getElementById('answer')
 
 const startButton = document.getElementById('start')
 
-const randomized, currentQuestion
+// const randomized, currentQuestion
 
 startButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
   console.log('Started')
   startButton.classList.add('hide')
-  randomized = question.sort(() => Math.random() - .5)
-  currentQuestion = 0
+  // randomized = question.sort(() => Math.random() - .5)
+  // currentQuestion = 0
   questionBox.classList.remove('hide')
   answerBox.classList.remove('hide')
   nextQuestion()
