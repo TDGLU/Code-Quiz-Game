@@ -4,9 +4,11 @@ const questionBox = document.getElementById('question')
 
 const answerBox = document.getElementById('choice-box')
 
+const answerList = document.getElementById('choice-list')
+
 const startButton = document.getElementById('start')
 
-const choices = document.querySelectorAll(".c")
+const choices = document.getElementById('c')
 
 let randomized, currentQuestion
 
