@@ -14,6 +14,7 @@
   --babyblue: #00FFFF;
   --red: rgb(238, 0, 0);
   --blue: rgb(0, 183, 255);
+  --darkblue: rgb(0, 26, 255);
 }
 
 @font-face {
@@ -40,8 +41,9 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("../imgs/frog2.jpg");
+  background-image: url("../imgs/beach.jpg");
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   z-index: 1;
 }
@@ -56,11 +58,11 @@
   font-size: 3rem;
   font-weight: bolder;
   color: #fff;
-  background-color: var(--green);
+  background-color: var(--blue);
   box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 60%);
   border: 2rem;
   border-radius: 100px;
-  opacity: 100%;
+  opacity: 85%;
   z-index: 1;
 }
 
@@ -78,9 +80,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   color:white;
-  background-color: var(--green);
+  background-color: var(--blue);
   border: 2rem;
   padding: 2rem;
   border-radius: 100px;
@@ -92,15 +94,11 @@
   box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 30%);
 }
 
-.answer {
+.choice-box {
   opacity: 85%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 2rem;
-  color:white;
-  background-color: var(--green);
+  background-color: var(--blue);
   border: 2rem;
   padding: 2rem;
   border-radius: 100px;
@@ -113,19 +111,26 @@
 }
 
 .choice-list {
-  position: absolute;
-  text-align: center;
   z-index: 3;
-  width: 80%;
+  height: 37%;
+  position: fixed;
+  align-items: center;
 }
 
 .c {
   text-align: center;
+  justify-content: center;
   display: flex;
-  background-color: var(--darkgreen);
+  position: absolute;
+  align-items: center;
+  font-size: 2rem;
+  color:white;
+  background-color: var(--darkblue);
   margin: 25px;
   padding: 12px;
-  border-radius: 33px;
+  border-radius: 40px;
+  width: 80%;
+  opacity: 85%;
 }
 
 .c:hover {
@@ -135,12 +140,12 @@
 
 .c.wrong {
   background-color: var(--red);
-  border: solid 3px var(--darkgreen);
+  border: solid 3px var(--darkblue);
 }
 
 .c.right {
-  background-color: var(--blue);
-  border: solid 3px var(--darkgreen);
+  background-color: var(--green);
+  border: solid 3px var(--darkblue);
 }
 
 .hide {

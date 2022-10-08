@@ -2,30 +2,55 @@ console.log('Test')
 
 const questionBox = document.getElementById('question')
 
-const answerBox = document.getElementById('answer')
+const answerBox = document.getElementById('choice-box')
 
 const startButton = document.getElementById('start')
 
-// const randomized, currentQuestion
+const choices = document.querySelectorAll(".c")
+
+let randomized, currentQuestion
 
 startButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
   console.log('Started')
   startButton.classList.add('hide')
-  // randomized = question.sort(() => Math.random() - .5)
-  // currentQuestion = 0
+  randomized = question.sort(() => Math.random() - .5)
+  currentQuestion = 0
   questionBox.classList.remove('hide')
   answerBox.classList.remove('hide')
   nextQuestion()
 }
 
 function nextQuestion() {
+  resetState()
   showQuestion(randomized[currentQuestion])
 }
 
 function showQuestion(question) {
-  question
+  questionBox.innerText = question.question
+  question.answers.forEach(answer => {
+    const button = document.createElement('li')
+    button.innerText = answer.text
+    button.classList.add('c')
+
+    if (answer.correct) {
+      button.dataset.correct = answer.correct
+    }
+    button.addEventListener('click', chooseAnswer)
+    answerBox.appendChild(button)
+  })
+}
+
+function resetState() {
+  choices.forEach((choice) => {
+    choice.classList.add("hide")
+  })
+
+  while (answerBox.firstChild) {
+    answerBox.removeChild
+    (answerBox.firstChild)
+  }
 }
 
 function chooseAnswer() {
@@ -39,7 +64,16 @@ const question = [
       { text: 'Numbers', correct: false},
       { text: 'Strings', correct: false},
       { text: 'Booleans', correct: false},
-      { text: 'Javascript', correct: true},
+      { text: 'Javascript', correct: true}
+    ]
+  },
+  {
+    question: 'Arrays in Javascript can be stored in ___.',
+    answers: [
+      { text: 'Numbers and Strings', correct: false},
+      { text: 'Other Arrays', correct: false},
+      { text: 'Booleans', correct: false},
+      { text: 'All of the above', correct: true}
     ]
   }
 ]
