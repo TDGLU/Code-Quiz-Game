@@ -118,9 +118,11 @@
   opacity: 85%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: var(--blue);
-  border: 2rem;
   padding: 2rem;
+  border: 2rem;
   border-radius: 100px;
   height: 50%;
   width: 75%;
@@ -133,15 +135,17 @@
 /* Choices all together */
 
 .choice-list {
-  height: 37%;
-  position: fixed;
-  align-items: center;
-  text-align: center;
   justify-content: center;
   display: flex;
-  height: 50%;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  height: 37%;
+  position: absolute;
+  text-align: center;
+  display: flex;
   width: 80%;
-  top: 12%;
+  z-index: 3;
 }
 
 /* Choices design */
@@ -150,9 +154,6 @@
   text-align: center;
   justify-content: center;
   display: flex;
-  position: absolute;
-  align-items: center;
-  font-size: 2rem;
   color:white;
   background-color: var(--darkblue);
   margin: 25px;
@@ -160,7 +161,7 @@
   border-radius: 40px;
   width: 80%;
   opacity: 85%;
-  z-index: 3;
+  z-index: 4;
 }
 
 /* Lightens choice color when hover  */

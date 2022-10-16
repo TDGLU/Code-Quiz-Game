@@ -19,7 +19,7 @@ let randomized, currentQuestion
 startButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
-  console.log('Started')
+  console.log('Quiz Started')
   startButton.classList.add('hide')
   randomized = question.sort(() => Math.random() - .5)
   currentQuestion = 0
@@ -29,7 +29,7 @@ function startQuiz() {
 }
 
 function nextQuestion() {
-  resetState()
+  reset()
   showQuestion(randomized[currentQuestion])
 }
 
@@ -47,16 +47,38 @@ function showQuestion(question) {
   })
 }
 
-function resetState() {
-    choices.classList.add("hide")
-    while (answerBox.firstChild) {
-      answerBox.removeChild
-      (answerBox.firstChild)
-    }
+function reset() {
+  choices.classList.add("hide")
+  while (answerBox.firstChild) {
+    answerBox.removeChild
+    (answerBox.firstChild)
+  }
 }
 
-function chooseAnswer() {
+function chooseAnswer(e) {
+  const selectedButton = e.target
+  const correct = selectedButton.dataset.correct
+  status(document.body, correct)
+  Array.from(answerList.children).forEach(button => {
+    status(button, button.dataset)
+  })
+  if (randomized.length > currentQuestion + 1){
+    nextQuestion.classList.remove('hide')
+  }
+}
 
+function status(element, correct) {
+  clearStatus(element)
+  if (correct) {
+    element.classList.add('right')
+  } else {
+    element.classList.add('wrong')
+  }
+}
+
+function clearStatus(element) {
+  element.classList.remove('right')
+  element.classList.remove('wrong')
 }
 
 const question = [
