@@ -130,6 +130,8 @@
   box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 30%);
 }
 
+/* Choices all together */
+
 .choice-list {
   height: 37%;
   position: fixed;
@@ -141,6 +143,8 @@
   width: 80%;
   top: 12%;
 }
+
+/* Choices design */
 
 .c {
   text-align: center;
@@ -159,10 +163,14 @@
   z-index: 3;
 }
 
+/* Lightens choice color when hover  */
+
 .c:hover {
   opacity: 50%;
   cursor: pointer;
 }
+
+/* Colors choice for right and wrong */
 
 .c.wrong {
   background-color: var(--red);
@@ -173,6 +181,8 @@
   background-color: var(--green);
   border: solid 3px var(--darkblue);
 }
+
+/* Class to hide elements */
 
 .hide {
   display: none;

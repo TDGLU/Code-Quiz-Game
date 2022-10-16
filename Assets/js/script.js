@@ -1,4 +1,8 @@
+// Console test 
+
 console.log('Test')
+
+// Grabbing elements from HTML
 
 const questionBox = document.getElementById('question')
 
@@ -32,10 +36,9 @@ function nextQuestion() {
 function showQuestion(question) {
   questionBox.innerText = question.question
   question.answers.forEach(answer => {
-    const button = document.createElement('li')
+    const button = document.createElement('c')
     button.innerText = answer.text
     button.classList.add('c')
-
     if (answer.correct) {
       button.dataset.correct = answer.correct
     }
@@ -45,14 +48,11 @@ function showQuestion(question) {
 }
 
 function resetState() {
-  choices.forEach((choice) => {
-    choice.classList.add("hide")
-  })
-
-  while (answerBox.firstChild) {
-    answerBox.removeChild
-    (answerBox.firstChild)
-  }
+    choices.classList.add("hide")
+    while (answerBox.firstChild) {
+      answerBox.removeChild
+      (answerBox.firstChild)
+    }
 }
 
 function chooseAnswer() {
