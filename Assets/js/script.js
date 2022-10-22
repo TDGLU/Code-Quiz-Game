@@ -99,5 +99,23 @@ const question = [
       { text: 'Booleans', correct: false},
       { text: 'All of the above', correct: true}
     ]
+  },
+  {
+    question: 'How many months have 28 days?',
+    answers: [
+      { text: '1', correct: false},
+      { text: '2', correct: false},
+      { text: '5', correct: false},
+      { text: '12', correct: true},
+    ]
+  },
+  {
+    question: 'How many letters are in the alphabet?',
+    answers: [
+      { text: '27', correct: false},
+      { text: '24', correct: false},
+      { text: '26', correct: true},
+      { text: '25', correct: false},
+    ]
   }
 ]
